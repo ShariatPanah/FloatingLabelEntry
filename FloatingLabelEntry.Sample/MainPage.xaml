@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FloatingLabelEntry.Sample.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:floatingControls="clr-namespace:FloatingLabelEntry.Controls;assembly=FloatingLabelEntry">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="15">
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="185"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine"
+                Source="dotnet_bot.png" />
+
+            <Label
+                SemanticProperties.HeadingLevel="Level1"
+                Style="{StaticResource Headline}"
+                Text="Floating Label Entries!" />
+
+            <floatingControls:FloatingLabelEntry FlowDirection="LeftToRight" LabelText="First Name" />
+
+            <floatingControls:FloatingLabelEntry FlowDirection="LeftToRight" LabelText="Last Name" />
+
+            <floatingControls:FloatingLabelEntry FlowDirection="LeftToRight" LabelText="Email" />
+
+            <floatingControls:FloatingLabelEntry FlowDirection="LeftToRight" LabelText="Phone Number" />
+
+            <Button
+                x:Name="CounterBtn"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Click me" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
